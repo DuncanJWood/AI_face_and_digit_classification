@@ -26,7 +26,7 @@ def parse(path_data, path_labels, shave):
     chars = np.reshape(chars, [Lines.shape[0]//lines_per_image, lines_per_image, chars_per_line - reduce_by])
     if shave:
         chars = chars[:,1:,:]
-    images = chars != " "
+    images = (chars != " ").astype(int)
 
 
     return images, labels
