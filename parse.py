@@ -1,6 +1,6 @@
 import numpy as np
 
-def parser(path_data, path_labels, shave):
+def parse(path_data, path_labels, shave):
 
     if shave:
         reduce_by = 2
